@@ -83,5 +83,5 @@ for row in data:
 # ----- write to database -----
     
 conn = sql.connect(database)
-price_table.to_sql(name='prices', con=conn, index=False, if_exists="replace")
+price_table.to_sql(name='prices', con=conn, index=False, if_exists="append")
 conn.close()
